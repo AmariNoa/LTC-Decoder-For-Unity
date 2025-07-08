@@ -1,0 +1,14 @@
+{
+    "name": "com.amari-noa.unity.ltc.decoder",
+    "rootNamespace": "com.amari_noa.unity.ltc.decoder",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

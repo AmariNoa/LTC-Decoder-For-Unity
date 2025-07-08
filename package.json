@@ -1,0 +1,9 @@
+{
+  "author": "Amari Noa",
+  "name": "com.amari-noa.unity.ltc.decoder",
+  "version": "1.0.0",
+  "unity": "2022.3",
+  "unityRelease": "61f1",
+  "displayName": "LTCDecoder",
+  "description": "LTC decode package for unity."
+}
