@@ -4,6 +4,6 @@
   "version": "1.0.0",
   "unity": "2022.3",
   "unityRelease": "61f1",
-  "displayName": "LTCDecoder",
+  "displayName": "LTC Decoder",
   "description": "LTC decode package for unity."
 }
