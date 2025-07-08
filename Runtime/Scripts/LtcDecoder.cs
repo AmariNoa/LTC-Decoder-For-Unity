@@ -64,7 +64,7 @@ namespace com.amari_noa.unity.ltc.decoder
         }
 
         // 現在までのオーディオ入力を取得しフレーム情報にデコードしていく
-        public void DecodeAudioToTcFrames(float audioThreshold)
+        public void DecodeAudioToTcFrames(float audioThreshold, double frameRate)
         {
             DecodeSucceededLastFrame = false;
 
@@ -120,7 +120,7 @@ namespace com.amari_noa.unity.ltc.decoder
                     _bitPattern = _bitPattern[(bPos + 16)..];
                     if (timeCodeBits.Length >= 80) {
                         timeCodeBits = timeCodeBits[^80..];
-                        (TimeCode, TimeSeconds) = DecodeBits(timeCodeBits, 30);
+                        (TimeCode, TimeSeconds) = DecodeBits(timeCodeBits, frameRate);
                     }
                 }
             }

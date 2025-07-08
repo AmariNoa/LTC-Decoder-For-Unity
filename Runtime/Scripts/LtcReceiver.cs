@@ -6,6 +6,7 @@ namespace com.amari_noa.unity.ltc.decoder
     {
         [SerializeField] private string deviceName;
         [SerializeField] private int sampleRate = 48000;
+        [SerializeField] private int ltcFrameRate = 30;
         [SerializeField, Range(0.0f, 1.0f)] private float audioGainThreshold = 0.5f;
 
         private LtcDecoder _ltcDecoder;
@@ -48,7 +49,7 @@ namespace com.amari_noa.unity.ltc.decoder
         }
 
         private void Update() {
-            _ltcDecoder.DecodeAudioToTcFrames(audioGainThreshold);
+            _ltcDecoder.DecodeAudioToTcFrames(audioGainThreshold, ltcFrameRate);
         }
     }
 }
