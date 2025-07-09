@@ -219,6 +219,11 @@ namespace com.amari_noa.unity.ltc.decoder
             return r;
         }
 
+        public static double ToSeconds(int hours, int mins, int secs, int frames, double frameRate)
+        {
+            return hours * 3600 + mins * 60 + secs + frames / frameRate;
+        }
+
         private static (string, double) DecodeBits(string bits, double frameRate)
         {
             // https://en.wikipedia.org/wiki/Linear_timecode
@@ -228,7 +233,7 @@ namespace com.amari_noa.unity.ltc.decoder
             var mins = Decode4Bits(bits, 32) + Decode3Bits(bits, 40) * 10;
             var hours = Decode4Bits(bits, 48) + Decode2Bits(bits, 56) * 10;
 
-            return ($"{hours:D2}:{mins:D2}:{secs:D2};{frames:D2}", hours * 3600 + mins * 60 + secs + frames / frameRate);
+            return ($"{hours:D2}:{mins:D2}:{secs:D2};{frames:D2}", ToSeconds(hours, mins, secs, frames, frameRate));
         }
 
         /*
